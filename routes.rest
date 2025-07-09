@@ -1,0 +1,32 @@
+//LOCAL HOST
+### Get all users
+GET http://localhost:3000/users HTTP/1.1
+
+### Get users by Id
+GET http://localhost:3000/users/6869a9b8a51e219b6e6fdce4 HTTP/1.1
+
+### Create users
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "email": "elenita@gmail.com",
+    "username": "Brown",
+    "name": "14/01/1965",
+    "ipaddress": "94.567.890.12"
+}
+
+### modify users
+PUT http://localhost:3000/users/6869a82fa51e219b6e6fdce1 HTTP/1.1 
+Content-Type: application/json
+
+{
+    "email": "actualizada@gmail.com",
+    "username": "actualizada@gmail.com",
+    "name": "Moroni",
+    "ipaddress": "123.123.123.123"
+}
+
+### Delete user by ID
+DELETE http://localhost:3000/users/6869a9b8a51e219b6e6fdce4 HTTP/1.1
+
