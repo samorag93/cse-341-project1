@@ -24,9 +24,10 @@ const createUser = async (req, res) => {
     //#swagger.tags=['Users']
     const user = {
         email: req.body.email,
-        username: req.body.username,
-        name: req.body.name,
-        ipaddress: req.body.ipaddress
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        birthDay: req.body.birthDay,
+        favoriteColor: req.body.favoriteColor
     };
     const response = await mongodb.getDatabase().db().collection('users').insertOne(user);
     if (response.acknowledged) {
@@ -41,9 +42,10 @@ const updateUser = async (req, res) => {
     const userId = new ObjectId(req.params.id);
     const user = {
         email: req.body.email,
-        username: req.body.username,
-        name: req.body.name,
-        ipaddress: req.body.ipaddress
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        birthDay: req.body.birthDay,
+        favoriteColor: req.body.favoriteColor
     };
     const response = await mongodb.getDatabase().db().collection('users').replaceOne({ _id: userId}, user);
     if (response.modifiedCount > 0) {
@@ -56,7 +58,7 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
     //#swagger.tags=['Users']
     const userId = new ObjectId(req.params.id);
-    const response = await mongodb.getDatabase().db().collection('users').deletedOne({ _id: userId});
+    const response = await mongodb.getDatabase().db().collection('users').deleteOne({ _id: userId});
     if (response.deletedCount > 0) {
         res.status(204).send();
     } else {

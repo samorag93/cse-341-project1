@@ -54,13 +54,13 @@
                 "email": {
                   "example": "any"
                 },
-                "username": {
+                "firstName": {
                   "example": "any"
                 },
-                "name": {
+                "lastName": {
                   "example": "any"
                 },
-                "ipaddress": {
+                "birthDay": {
                   "example": "any"
                 }
               }
@@ -121,13 +121,13 @@
                 "email": {
                   "example": "any"
                 },
-                "username": {
+                "firstName": {
                   "example": "any"
                 },
-                "name": {
+                "lastName": {
                   "example": "any"
                 },
-                "ipaddress": {
+                "birthDay": {
                   "example": "any"
                 }
               }

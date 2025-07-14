@@ -11,22 +11,24 @@ content-type: application/json
 
 {
     "email": "elenita@gmail.com",
-    "username": "Brown",
-    "name": "14/01/1965",
-    "ipaddress": "94.567.890.12"
+    "firstName": "Brown",
+    "lastName": "14/01/1965",
+    "birthDay": "94.567.890.12",
+    "favoriteColor" : "Blue"
 }
 
 ### modify users
-PUT http://localhost:3000/users/6869a82fa51e219b6e6fdce1 HTTP/1.1 
+PUT http://localhost:3000/users/6874e7182e1930eaf5b8c70a HTTP/1.1 
 Content-Type: application/json
 
 {
-    "email": "actualizada@gmail.com",
-    "username": "actualizada@gmail.com",
-    "name": "Moroni",
-    "ipaddress": "123.123.123.123"
+    "email": "usuario4@users.com",
+    "firstName": "Jose",
+    "lastName": "Aguilar",
+    "birthDay": "08/11/1965",
+    "favoriteColor" : "Brown"
 }
 
 ### Delete user by ID
-DELETE http://localhost:3000/users/6869a9b8a51e219b6e6fdce4 HTTP/1.1
+DELETE http://localhost:3000/users/6874e5965482b823f348807d HTTP/1.1
 
